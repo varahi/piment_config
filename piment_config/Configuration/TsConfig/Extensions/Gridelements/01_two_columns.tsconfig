@@ -1,0 +1,38 @@
+# Page TSConfig:
+tx_gridelements.overruleRecords = 1
+tx_gridelements.setup {
+    # ID of Element
+    Grid_2Cols {
+        title = 2 columns
+        description = Grid element 2 columns with configurations
+        flexformDS = FILE:EXT:piment_config/Configuration/FlexForms/Gridelements/01_two_columns.xml
+        icon = EXT:piment_config/Resources/Public/Icons/icon.gif
+        topLevelLayout = 1
+        config {
+            colCount = 2
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Contenu gauche
+                            colPos = 1
+                            //allowed {
+                            //    CType = header,text,textpic,image
+                            //}
+                        }
+                        2 {
+                            name = Contenu droite
+                            colPos = 2
+                            //allowed {
+                            //    CType = header,text,textpic,image
+                            //}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

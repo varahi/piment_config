@@ -21,6 +21,8 @@
 @import 'EXT:piment_config/Configuration/TypoScript/Extension/powermail/setup.txt'
 @import 'EXT:piment_config/Configuration/TypoScript/Extension/lightbox/setup.txt'
 
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TypoScript/Extension/gridelements/" extensions="typoscript">
+
 #### MODULE SEARCH GOOGLE
 lib.searchbox = TEXT
 lib.searchbox.value(

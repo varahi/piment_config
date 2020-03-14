@@ -1,0 +1,2 @@
+# Include gridelements layouts
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:piment_config/Configuration/TsConfig/Extensions/Gridelements/" extensions="tsconfig">

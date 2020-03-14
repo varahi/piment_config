@@ -1,0 +1,40 @@
+# Page TSConfig:
+tx_gridelements.overruleRecords = 1
+tx_gridelements.setup {
+    # ID of Element
+    Grid_4Cols {
+        title = 4 columns
+        description =  Grid element 4 columns with configurations
+        #flexformDS = FILE:EXT:piment_config/Configuration/FlexForms/Gridelements/02_three_columns.xml
+        icon = EXT:piment_config/Resources/Public/Icons/icon.gif
+        topLevelLayout = 1
+        config {
+            colCount = 4
+            rowCount = 1
+            rows {
+
+                1 {
+                    columns {
+                        1 {
+                            name = Colonne 1
+                            colPos = 0
+                        }
+                        2 {
+                            name = Colonne 2
+                            colPos = 1
+                        }
+                        3 {
+                            name = Colonne 3
+                            colPos = 2
+                        }
+                        4 {
+                            name = Colonne 4
+                            colPos = 3
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
