@@ -2,7 +2,7 @@
 tx_gridelements.overruleRecords = 1
 tx_gridelements.setup {
     # ID of Element
-    Grid_3Cols {
+    3 {
         title = 3 columns
         description = Grid element 3 Columns with configurations
         flexformDS = FILE:EXT:piment_config/Configuration/FlexForms/Gridelements/02_three_columns.xml

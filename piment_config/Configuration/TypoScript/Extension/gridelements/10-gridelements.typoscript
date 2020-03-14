@@ -1,7 +1,7 @@
 tt_content.gridelements_pi1.20.10.setup {
 
-    Grid_2Cols < lib.gridelements.defaultGridSetup
-    Grid_2Cols {
+    1 < lib.gridelements.defaultGridSetup
+    1 {
         cObject = FLUIDTEMPLATE
         cObject {
             partialRootPath = EXT:piment_config/Resources/Private/Extensions/Gridelements/Partials/
@@ -9,8 +9,8 @@ tt_content.gridelements_pi1.20.10.setup {
         }
     }
 
-    Grid_3Cols < lib.gridelements.defaultGridSetup
-    Grid_3Cols {
+    3 < lib.gridelements.defaultGridSetup
+    3 {
         cObject = FLUIDTEMPLATE
         cObject {
             partialRootPath = EXT:piment_config/Resources/Private/Extensions/Gridelements/Partials/
@@ -18,8 +18,8 @@ tt_content.gridelements_pi1.20.10.setup {
         }
     }
 
-    Grid_4Cols < lib.gridelements.defaultGridSetup
-    Grid_4Cols {
+    2 < lib.gridelements.defaultGridSetup
+    2 {
         cObject = FLUIDTEMPLATE
         cObject {
             partialRootPath = EXT:piment_config/Resources/Private/Extensions/Gridelements/Partials/
