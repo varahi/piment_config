@@ -1,0 +1,29 @@
+################################
+#### BACKENDLAYOUT: DEFAULT ####
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+            default {
+                title = 1 colonne
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Contenu
+										colPos = 0
+									}
+								}
+							}
+						}
+					}
+                }
+                icon = EXT:piment_config/Resources/Public/Icons/default.gif
+            }
+        }
+    }
+}

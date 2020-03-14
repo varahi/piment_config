@@ -1,0 +1,29 @@
+##########################################
+#### BACKENDLAYOUT: DEFAULT 2 COLUMNS ####
+##########################################
+mod {
+    web_layout {
+        BackendLayouts {
+            default_2_columns {
+                title = 2 colonnes
+                config {
+				  backend_layout {
+					colCount = 1
+					rowCount = 1
+					rows {
+					  1 {
+						columns {
+						  1 {
+							name = Contenu gauche
+							colPos = 0
+						  }
+						}
+					  }
+					}
+				  }
+				}
+                icon = EXT:piment_config/Resources/Public/Icons/default_2_columns.gif
+            }
+        }
+    }
+}

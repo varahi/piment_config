@@ -1,0 +1,153 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        contentsCss: "/fileadmin/templates/default/css/rte.css"
+
+        stylesSet:
+            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Table", element: "table", attributes: { 'class': 'table table-hover' } }
+            - { name: "Table Striped", element: "table", attributes: { 'class': 'table table-hover table-striped' } }
+            - { name: "Table Bordered", element: "table", attributes: { 'class': 'table table-hover table-bordered' } }
+            - { name: "Table Condensed", element: "table", attributes: { 'class': 'table table-hover table-condensed' } }
+            - { name: "Row Active", element: "tr", attributes: { 'class': 'active' } }
+            - { name: "Row Success", element: "tr", attributes: { 'class': 'success' } }
+            - { name: "Row Info", element: "tr", attributes: { 'class': 'info' } }
+            - { name: "Row Warning", element: "tr", attributes: { 'class': 'warning' } }
+            - { name: "Row Danger", element: "tr", attributes: { 'class': 'danger' } }
+            - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
+            - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+            - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
+            - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
+            - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
+            - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+            - { name: "Button Vert", element: "a", attributes: { 'class': 'bt-vert' } }
+            - { name: "Button jaune", element: "a", attributes: { 'class': 'bt-jaune' } }
+            - { name: "Button orange", element: "a", attributes: { 'class': 'bt-orange' } }
+            - { name: "Button Bleu", element: "a", attributes: { 'class': 'bt-bleu' } }
+            - { name: "Button Bleu clair", element: "a", attributes: { 'class': 'bt-bleu-clair' } }
+            - { name: "Titre p", element: "p", attributes: { 'class': 'title' } }
+            - { name: "Taille 18 p", element: "p", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 li", element: "li", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 span", element: "span", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 18 a", element: "a", attributes: { 'class': 'size_18' } }
+            - { name: "Taille 20 p", element: "p", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 li", element: "li", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 span", element: "span", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 20 a", element: "a", attributes: { 'class': 'size_20' } }
+            - { name: "Taille 22 p", element: "p", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 li", element: "li", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 span", element: "span", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 22 a", element: "a", attributes: { 'class': 'size_22' } }
+            - { name: "Taille 24 p", element: "p", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 li", element: "li", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 span", element: "span", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 24 a", element: "a", attributes: { 'class': 'size_24' } }
+            - { name: "Taille 30 p", element: "p", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 li", element: "li", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 span", element: "span", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 30 a", element: "a", attributes: { 'class': 'size_30' } }
+            - { name: "Taille 36 p", element: "p", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 li", element: "li", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 span", element: "span", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 36 a", element: "a", attributes: { 'class': 'size_36' } }
+            - { name: "Taille 38 p", element: "p", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 li", element: "li", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 span", element: "span", attributes: { 'class': 'size_38' } }
+            - { name: "Taille 38 a", element: "a", attributes: { 'class': 'size_38' } }
+            - { name: "Couleur jaune p", element: "p", attributes: { 'class': 'txt-jaune' } }
+            - { name: "Couleur jaune li", element: "li", attributes: { 'class': 'txt-jaune' } }
+            - { name: "Couleur jaune span", element: "span", attributes: { 'class': 'txt-jaune' } }
+            - { name: "Couleur jaune a", element: "a", attributes: { 'class': 'txt-jaune' } }
+            - { name: "Couleur bleu p", element: "p", attributes: { 'class': 'txt-bleu' } }
+            - { name: "Couleur bleu li", element: "li", attributes: { 'class': 'txt-bleu' } }
+            - { name: "Couleur bleu span", element: "span", attributes: { 'class': 'txt-bleu' } }
+            - { name: "Couleur bleu a", element: "a", attributes: { 'class': 'txt-bleu' } }
+            - { name: "Couleur bleu clair p", element: "p", attributes: { 'class': 'txt-bleu-clair' } }
+            - { name: "Couleur bleu clair li", element: "li", attributes: { 'class': 'txt-bleu-clair' } }
+            - { name: "Couleur bleu clair span", element: "span", attributes: { 'class': 'txt-bleu-clair' } }
+            - { name: "Couleur bleu clair a", element: "a", attributes: { 'class': 'txt-bleu-clair' } }
+            - { name: "Couleur vert p", element: "p", attributes: { 'class': 'txt-vert' } }
+            - { name: "Couleur vert li", element: "li", attributes: { 'class': 'txt-vert' } }
+            - { name: "Couleur vert span", element: "span", attributes: { 'class': 'txt-vert' } }
+            - { name: "Couleur vert a", element: "a", attributes: { 'class': 'txt-vert' } }
+            - { name: "Couleur orange p", element: "p", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange li", element: "li", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange span", element: "span", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur orange a", element: "a", attributes: { 'class': 'txt-orange' } }
+            - { name: "Couleur rouge p", element: "p", attributes: { 'class': 'txt-rouge' } }
+            - { name: "Couleur rouge li", element: "li", attributes: { 'class': 'txt-rouge' } }
+            - { name: "Couleur rouge span", element: "span", attributes: { 'class': 'txt-rouge' } }
+            - { name: "Couleur rouge a", element: "a", attributes: { 'class': 'txt-rouge' } }
+            - { name: "Font adpro p", element: "p", attributes: { 'class': 'font-adpro' } }
+            - { name: "Font adpro li", element: "li", attributes: { 'class': 'font-adpro' } }
+            - { name: "Font adpro span", element: "span", attributes: { 'class': 'font-adpro' } }
+            - { name: "Font adpro a", element: "a", attributes: { 'class': 'font-adpro' } }
+            - { name: "Font adpro bold p", element: "p", attributes: { 'class': 'font-adpro-bold' } }
+            - { name: "Font adpro bold li", element: "li", attributes: { 'class': 'font-adpro-bold' } }
+            - { name: "Font adpro bold span", element: "span", attributes: { 'class': 'font-adpro-bold' } }
+            - { name: "Font adpro bold a", element: "a", attributes: { 'class': 'font-adpro-bold' } }
+            - { name: "Contact été p", element: "p", attributes: { 'class': 'contact-ete' } }
+            - { name: "Contact été a", element: "a", attributes: { 'class': 'contact-ete' } }
+            - { name: "Contact été span", element: "span", attributes: { 'class': 'contact-ete' } }
+            - { name: "Contact automne p", element: "p", attributes: { 'class': 'contact-automne' } }
+            - { name: "Contact automne a", element: "a", attributes: { 'class': 'contact-automne' } }
+            - { name: "Contact automne span", element: "span", attributes: { 'class': 'contact-automne' } }
+            - { name: "Contact printemps p", element: "p", attributes: { 'class': 'contact-printemps' } }
+            - { name: "Contact printemps a", element: "a", attributes: { 'class': 'contact-printemps' } }
+            - { name: "Contact printemps span", element: "span", attributes: { 'class': 'contact-printemps' } }
+            - { name: "Petit bouton gris p", element: "p", attributes: { 'class': 'petit-bouton-gris' } }
+            - { name: "Petit bouton gris a", element: "a", attributes: { 'class': 'petit-bouton-gris' } }
+            - { name: "Petit bouton gris span", element: "span", attributes: { 'class': 'petit-bouton-gris' } }
+            - { name: "PDF p", element: "p", attributes: { 'class': 'pdf' } }
+            - { name: "PDF a", element: "a", attributes: { 'class': 'pdf' } }
+            - { name: "PDF span", element: "span", attributes: { 'class': 'pdf' } }
+            - { name: "PDF li", element: "li", attributes: { 'class': 'pdf' } }
+            - { name: "coordonnee p", element: "p", attributes: { 'class': 'coordonnee' } }
+            - { name: "coordonnee a", element: "a", attributes: { 'class': 'coordonnee' } }
+            - { name: "coordonnee span", element: "span", attributes: { 'class': 'coordonnee' } }
+            - { name: "coordonnee li", element: "li", attributes: { 'class': 'coordonnee' } }
+            - { name: "telephone p", element: "p", attributes: { 'class': 'telephone' } }
+            - { name: "telephone a", element: "a", attributes: { 'class': 'telephone' } }
+            - { name: "telephone span", element: "span", attributes: { 'class': 'telephone' } }
+            - { name: "telephone li", element: "li", attributes: { 'class': 'telephone' } }
+            - { name: "numero fax p", element: "p", attributes: { 'class': 'numero-fax' } }
+            - { name: "numero fax a", element: "a", attributes: { 'class': 'numero-fax' } }
+            - { name: "numero fax span", element: "span", attributes: { 'class': 'numero-fax' } }
+            - { name: "numero fax li", element: "li", attributes: { 'class': 'numero-fax' } }
+            - { name: "mail p", element: "p", attributes: { 'class': 'mail' } }
+            - { name: "mail a", element: "a", attributes: { 'class': 'mail' } }
+            - { name: "mail span", element: "span", attributes: { 'class': 'mail' } }
+            - { name: "mail li", element: "li", attributes: { 'class': 'mail' } }
+            - { name: "Span", element: "span", attributes: { 'class': 'span-tag' } }
+
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h1;h2;h3;h4;h5;pre"
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike

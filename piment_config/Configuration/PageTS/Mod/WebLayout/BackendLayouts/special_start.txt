@@ -1,0 +1,75 @@
+######################################
+#### BACKENDLAYOUT: SPECIAL START ####
+######################################
+mod {
+    web_layout {
+        BackendLayouts {
+            special_start {
+                title = Special page accueil
+                config {
+				  backend_layout {
+					colCount = 3
+					rowCount = 4
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Fond Slideshow
+									colspan = 3
+									colPos = 101
+								}
+							}
+						}
+						2 {
+							columns {
+								1 {
+									name = Actualités
+									colPos = 104
+								}
+								2 {
+									name = Agenda
+									colPos = 102
+								}
+								3 {
+									name = Carte
+									colPos = 103
+								}
+							}
+						}
+						3 {
+							columns {
+								1 {
+									name = Kiosque
+									colPos = 100
+								}
+								2 {
+									name = Communes
+									colspan = 2
+									colPos = 105
+								}
+							}
+						}
+						4 {
+							columns {
+								1 {
+									name = Horaires 1
+									colPos = 106
+								}
+								2 {
+									name = Horaires 2
+									colPos = 107
+								}
+								3 {
+									name = Bloc facebook
+									colPos = 108
+								}
+							}
+						}
+					}
+				  }
+				}
+                icon = EXT:piment_config/Resources/Public/Icons/special_start.gif
+            }
+        }
+    }
+}
