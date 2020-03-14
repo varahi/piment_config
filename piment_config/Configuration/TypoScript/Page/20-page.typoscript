@@ -1,0 +1,40 @@
+page{
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = pagelayout
+            #pagets__default_deja = TEXT
+            #pagets__default_deja.value = DefaultDeja
+        }
+
+        dataProcessing {
+            51 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            51 {
+                special = directory
+                special.value = {$page.theme.accesRapide}
+                includeNotInMenu = 1
+                as = shortcutnavigation
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+            52 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            52 {
+                special = directory
+                special.value = {$page.theme.footermenu}
+                includeNotInMenu = 1
+                as = footernavigation
+            }
+        }
+        variables {
+
+            homepage = TEXT
+            homepage.value = {$page.theme.homepage}
+        }
+    }
+}

@@ -1,0 +1,169 @@
+page{
+  includeCSSLibs {
+    #10 = {$page.fluidtemplate.cssRootPath}libs/cssLib.css
+    #twitter = http://twitter.com/styles/blogger.css
+    #twitter.external = 1
+  }
+  includeCSS {
+    10 = {$page.fluidtemplate.cssRootPath}jquery.vegas.css
+  }
+  includeJSLibs {
+    #10 = {$page.fluidtemplate.jsRootPath}libs/jquery.min.js
+  }
+  includeJSFooterlibs {
+    10 = {$page.fluidtemplate.jsRootPath}libs/jquery.dotdotdot.min.js
+    11 = {$page.fluidtemplate.jsRootPath}libs/jquery.vegas.min.js
+  }
+  includeJSFooter {
+    #20 = {$page.fluidtemplate.jsRootPath}libs/jquery.dotdotdot.min.js
+    18 = {$page.fluidtemplate.jsRootPath}jquery.mCustomScrollbar.concat.min.js
+    19 = {$page.fluidtemplate.jsRootPath}rwdImageMap.js
+    #20 = {$page.fluidtemplate.jsRootPath}libs/jquery.vegas.min.js
+    49 = {$page.fluidtemplate.jsRootPath}unveil.js
+  }
+}
+
+page{
+  10 = FLUIDTEMPLATE
+  10 {
+    templateName = TEXT
+    templateName.stdWrap.cObject = CASE
+    templateName.stdWrap.cObject {
+      key.data = pagelayout
+      #pagets__default_deja = TEXT
+      #pagets__default_deja.value = DefaultDeja
+    }
+
+    dataProcessing {
+      51 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      51 {
+        special = directory
+        special.value = {$page.theme.accesRapide}
+        includeNotInMenu = 1
+        as = shortcutnavigation
+        dataProcessing {
+          10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+          10 {
+            references.fieldName = media
+          }
+        }
+      }
+      52 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      52 {
+        special = directory
+        special.value = {$page.theme.footermenu}
+        includeNotInMenu = 1
+        as = footernavigation
+      }
+    }
+    variables {
+
+      homepage = TEXT
+      homepage.value = {$page.theme.homepage}
+    }
+  }
+}
+config.contentObjectExceptionHandler = 0
+#config.noPageTitle = 2
+#page.headerData {
+#    5 = LOAD_REGISTER
+#    5 {
+#      sitetitle < sitetitle
+#      sitetitle.htmlSpecialChars = 1
+#      title {
+#        field = title
+#        htmlSpecialChars = 1
+#      }
+#    }
+#    10 = TEXT
+#    10 {
+#      value = {register:title} | {register:sitetitle}
+#      override = {register:title}
+#      override.if {
+#        value.data = leveluid : 0
+#        equals.data = page : uid
+#      }
+#      wrap = <title>|</title>
+#      insertData = 1
+#    }
+#}
+
+# ******************
+# Cadre1 / Cadre2
+# ******************
+tt_content = CASE
+tt_content.key.field = CType
+tt_content.stdWrap {
+  innerWrap.cObject = CASE
+  innerWrap.cObject {
+    key.field = layout
+
+    # Cadre Calepin gauche
+    20 = TEXT
+    20 {
+      value = |
+      wrap = <div class="block-grey">|</div>
+    }
+    21 = TEXT
+    21 {
+      value = |
+      wrap = <div class="block-red">|</div>
+    }
+  }
+}
+
+plugin.tx_powermail {
+  view {
+    partialRootPaths {
+      10 = fileadmin/templates/default/plugin_tpl/powermailrecaptcha/Resources/Private/Partials
+    }
+  }
+}
+//GRID ELEMENT stdWrap functions being applied to each element
+lib.gridelements.defaultGridSetup {
+    columns {
+        default {
+            renderObj = COA
+            renderObj {
+                # You can use registers to i.e. provide different image settings for each column
+                # 10 = LOAD_REGISTER
+                20 =< tt_content
+                # And you can reset the register later on
+                # 30 = RESTORE_REGISTER
+            }
+        }
+
+        2 < .default
+        2 {
+        }
+    }
+
+    # if you want to provide your own templating, just insert a cObject here
+    # this will prevent the collected content from being rendered directly
+    # i.e. cObject = TEMPLATE or cObject = FLUIDTEMPLATE will be available from the core
+    # the content will be available via fieldnames like
+    # tx_gridelements_view_columns (an array containing each column)
+    # or tx_gridelements_view_children (an array containing each child)
+    # tx_gridelements_view_column_123 (123 is the number of the column)
+    # or tx_gridelements_view_child_123 (123 is the UID of the child)
+}
+
+lib.categories = CONTENT
+lib.categories {
+  table = sys_category
+  select {
+    pidInList = root
+    selectFields = sys_category.title
+    join = sys_category_record_mm on sys_category_record_mm.uid_local = sys_category.uid
+    where.field = recordUid
+    where.wrap = sys_category_record_mm.uid_foreign=|
+  }
+  renderObj = COA
+  renderObj {
+    1 = TEXT
+    1 {
+      field = title
+      stdWrap.noTrimWrap = | cat-||
+    }
+  }
+}

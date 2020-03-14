@@ -1,0 +1,7 @@
+plugin.tx_powermail {
+    view {
+        partialRootPaths {
+            10 = fileadmin/templates/default/plugin_tpl/powermailrecaptcha/Resources/Private/Partials
+        }
+    }
+}

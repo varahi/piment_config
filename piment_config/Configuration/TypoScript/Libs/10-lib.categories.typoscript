@@ -1,0 +1,19 @@
+lib.categories = CONTENT
+lib.categories {
+    table = sys_category
+    select {
+        pidInList = root
+        selectFields = sys_category.title
+        join = sys_category_record_mm on sys_category_record_mm.uid_local = sys_category.uid
+        where.field = recordUid
+        where.wrap = sys_category_record_mm.uid_foreign=|
+    }
+    renderObj = COA
+    renderObj {
+        1 = TEXT
+        1 {
+            field = title
+            stdWrap.noTrimWrap = | cat-||
+        }
+    }
+}

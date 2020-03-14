@@ -1,0 +1,25 @@
+page{
+    includeCSSLibs {
+        #10 = {$page.fluidtemplate.cssRootPath}libs/cssLib.css
+        #twitter = http://twitter.com/styles/blogger.css
+        #twitter.external = 1
+    }
+    includeCSS {
+        10 = {$page.fluidtemplate.cssRootPath}jquery.vegas.css
+        100_css_bootstrap_grid = EXT:piment_config/Resources/Public/bootstrap/bootstrap-grid.min.css
+    }
+    includeJSLibs {
+        #10 = {$page.fluidtemplate.jsRootPath}libs/jquery.min.js
+    }
+    includeJSFooterlibs {
+        10 = {$page.fluidtemplate.jsRootPath}libs/jquery.dotdotdot.min.js
+        11 = {$page.fluidtemplate.jsRootPath}libs/jquery.vegas.min.js
+    }
+    includeJSFooter {
+        #20 = {$page.fluidtemplate.jsRootPath}libs/jquery.dotdotdot.min.js
+        18 = {$page.fluidtemplate.jsRootPath}jquery.mCustomScrollbar.concat.min.js
+        19 = {$page.fluidtemplate.jsRootPath}rwdImageMap.js
+        #20 = {$page.fluidtemplate.jsRootPath}libs/jquery.vegas.min.js
+        49 = {$page.fluidtemplate.jsRootPath}unveil.js
+    }
+}
