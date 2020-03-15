@@ -1,0 +1,44 @@
+# NS INSTAGRAM SETUP
+plugin.tx_nsinstagram_feed {
+    view {
+        # cat=plugin.tx_nsinstagram_feed/file; type=string; label=Path to template root (FE)
+        templateRootPath = {$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Templates/
+        # cat=plugin.tx_nsinstagram_feed/file; type=string; label=Path to template partials (FE)
+        partialRootPath = {$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Partials/
+        # cat=plugin.tx_nsinstagram_feed/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = {$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Layouts/
+    }
+    settings{
+
+        #cat=plugin.tx_nsinstagram_feed/100; type=string; label=LLL:EXT:ns_instagram/Resources/Private/Language/locallang_db.xlf:tx_nsinstagram_feed.flexform.accessToken
+        #accessToken = 4543953819.a4522cb.0135835d1f1b4b35b6c37cd29c5dcfbd
+        accessToken = {$config.instagramToken}
+
+        javascript{
+            # cat=plugin.tx_nsinstagram_feed/a; type=boolean; label= LLL:EXT:ns_instagram/Resources/Private/Language/locallang_db.xlf:jquery
+            jquery = 0
+        }
+    }
+}
+
+plugin.tx_nsinstagram_phototile {
+    view {
+        # cat=plugin.tx_nsinstagram_phototile/file; type=string; label=Path to template root (FE)
+        templateRootPath = {$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Templates/
+        # cat=plugin.tx_nsinstagram_phototile/file; type=string; label=Path to template partials (FE)
+        partialRootPath ={$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Partials/
+        # cat=plugin.tx_nsinstagram_phototile/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = {$page.fluidtemplate.pluginRootPath}nsinstagram/Private/Layouts/
+    }
+    settings {
+
+        #cat=plugin.tx_nsinstagram_phototile/100; type=string; label=LLL:EXT:ns_instagram/Resources/Private/Language/locallang_db.xlf:tx_nsinstagram_phototile.flexform.accessToken
+        accessToken =
+
+        javascript{
+            # cat=plugin.tx_nsinstagram_phototile/a; type=boolean; label= LLL:EXT:ns_instagram/Resources/Private/Language/locallang_db.xlf:jquery
+            jquery = 0
+        }
+    }
+
+}

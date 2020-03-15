@@ -1,0 +1,8 @@
+
+styles.content {
+    textmedia {
+        # cat=content/cTextmedia/b1; type=int+; label= Max Image/Media Width: This indicates that maximum number of pixels (width) a block of media elements inserted as content is allowed to consume
+        maxW = 1920
+        maxWInText = 800
+    }
+}

@@ -1,0 +1,39 @@
+config {
+    # domain pour les urls
+    domain = avancon.cc-serreponconvaldavance.localhost
+    # domain pour la plateforme de dev
+    devDomain = dev.monsite.com
+    # searchBox Google
+    searchboxGoogleId = 009013388862811572975:2pgdbynngpw
+    recaptchaSitekey =
+    recaptchaSecretkey =
+    instagramToken =
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+    admPanel = 0
+}
+
+page{
+    tracking {
+        google {
+            # cat=config Piment Rouge: basic/180/100; type=string; label=Google: Tracking-ID
+            trackingID =
+        }
+    }
+
+    theme {
+        homepage = 1
+        mainmenu = 1
+        accesRapide = 32
+        footermenu = 14
+    }
+}
+
+
+styles.templates {
+    # cat=content/templates/b1; type=string; label= Path of Fluid Templates for all defined content elements
+    templateRootPath = fileadmin/templates/default/plugin_tpl/fluid_styled_content/Resources/Private/Templates
+    partialRootPath = fileadmin/templates/default/plugin_tpl/fluid_styled_content/Resources/Private/Partials
+}
