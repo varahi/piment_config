@@ -1,0 +1,21 @@
+# POWERMAIL CONSTANT
+# cat=powermailrecaptcha//0010; type=text; label= Google Recaptcha Sitekey: Go to developers.google.com/recaptcha/ and register your domain. After that you can add your site key here.
+plugin.tx_powermailrecaptcha.sitekey = {$config.recaptchaSitekey}
+
+# cat=powermailrecaptcha//0020; type=text; label= Google Recaptcha Secretkey: Go to developers.google.com/recaptcha/ and register your domain. After that you can add your secret key here.
+plugin.tx_powermailrecaptcha.secretkey = {$config.recaptchaSecretkey}
+
+plugin.tx_powermail {
+    settings {
+        receiver {
+            overwrite {
+                senderName = PETR
+                senderEmail = nepasrepondre@avancon.cc-serreponconvaldavance.com
+                senderEmail = nepasrepondre@avancon.cc-serreponconvaldavance.com
+                returnPath = nepasrepondre@avancon.cc-serreponconvaldavance.com
+                replyToEmail = nepasrepondre@avancon.cc-serreponconvaldavance.com
+                replyToName = PETR
+            }
+        }
+    }
+}

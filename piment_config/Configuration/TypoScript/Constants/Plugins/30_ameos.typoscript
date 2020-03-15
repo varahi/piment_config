@@ -1,3 +1,4 @@
+
 ameos {
     tarteaucitron {
         #cat=plugin.ameos_tarteaucitron.init; type=string; label=hashtag that opens the administration panel
