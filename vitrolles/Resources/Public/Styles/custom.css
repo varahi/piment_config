@@ -16,7 +16,8 @@
     background: url('../images/icon_datepicker.png') no-repeat right+10px center;
 
 }
-.tx-vitrolles form input, form textarea {
+.tx-vitrolles form input,
+form textarea {
     margin: 0;
     display: inline-block;
     width: 100%;
@@ -29,30 +30,52 @@
     vertical-align: middle;
 
 }
-
 .tx-vitrolles .datepicker-form {
     max-width: 260px;
 }
-
 .tx-vitrolles .reservations-date {
     display: none;
 }
-.tx-vitrolles .input-select {
-    margin-left: 100px;
-}
-
-.tx-vitrolles .submit,
-.tx-vitrolles input[type="submit"]{
-    margin-top: 50px;
-    width: 290px;
-    background: #072e5e;
-}
-
 .tx-vitrolles .layout2 {
     width: 300px !important;
     margin-right: 30px;
 }
 
+/* .input-fields__top */
+.input-fields__top {
+    width: 80%;
+    margin-bottom: 50px;
+}
+.input-fields__top .left-col {
+    width: 48%;
+    float: left;
+}
+.input-fields__top .right-col {
+    width: 50%;
+    float: right;
+}
+.input-fields__top span.prefix {
+    display: inline-block;
+    width: 100px;
+    margin-top: 10px;
+}
+.input-fields__top span.suffix {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+.clear {
+    clear: both;
+}
+
+/* .input-fields__bottom  */
+.input-fields__bottom {
+    margin-bottom: 20px;
+}
+.input-fields__bottom .left-col,
+.input-fields__bottom .right-col {
+    width: 50%;
+    float: left;
+}
 .tx-vitrolles #nom,
 .tx-vitrolles #prenom,
 .tx-vitrolles #email,
@@ -61,23 +84,17 @@
     float: right;
 }
 
-.input-fields__top {
-    width: 80%;
-    margin-bottom: 30px;
-}
-.left-col {
-    border: 1px solid red;
-    width: 60%;
-    float: left;
-}
-.right-col {
-    border: 1px solid red;
-    width: 33%;
-    float: right;
+
+/* Submit */
+.tx-vitrolles .submit,
+.tx-vitrolles input[type="submit"]{
+    margin-top: 50px;
+    width: 290px;
+    background: #072e5e;
 }
 
 
-/* Select fields */
+/* Override Select fields */
 .ui-selectmenu-button span.ui-selectmenu-text {
     font-size: inherit;
     color: inherit;
@@ -87,4 +104,32 @@
     display: block;
     border: 2px solid #dedede;
 
+}
+
+
+/* Calendar */
+.legend-calendar {
+    width: 300px;
+    margin: 20px 0 0 60px;
+}
+.legend-calendar p {
+    width: 30px;
+    height: 30px;
+}
+.legend-calendar p span {
+    margin: 7px 0 0 40px;
+    display: inline-block;
+    white-space: nowrap;
+}
+.block-available {
+    background: #eb7404;
+}
+.block-wait {
+    background: #214099;
+}
+.block-unvailable {
+    background: #ff0000;
+}
+#booking .input-select {
+    display: none;
 }
